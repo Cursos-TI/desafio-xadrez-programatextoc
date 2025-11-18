@@ -1,8 +1,12 @@
 #include <stdio.h>
+void moverTorre(int Torre){
+if(Torre>0){
+moverTorre(Torre-1);
+printf("%d Movimento da Torre para direita:\n",Torre);}}
+
 int main() {
 //Movimento da torre 5 casas para direita FOR
-for(int i = 1; i <= 5; i++){
-printf("Movimento da Torre:%d Cinco casas a direita\n",i);}
+moverTorre(5);
 
 printf("\n*************************************\n");
 
@@ -43,7 +47,6 @@ printf("Movimento 2: Movimento horizontal(1 casa perpendicular)\n");
 for( int z=0; z<CasasParaEsquerda; z++){
 printf("Passo final: Movendo para esquerda\n");}}}
 
-printf("\***************************************\n");
 
 printf("Movimento do cavalo em FOR completo\n");
 printf("\n***************************************\n");
